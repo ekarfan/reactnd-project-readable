@@ -1,5 +1,4 @@
 
-**Programming assignment for the [Udacity React Nanodegree](https://www.udacity.com/course/react-nanodegree--nd019) program.**
 
 # Readable
 
