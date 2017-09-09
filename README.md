@@ -1,14 +1,11 @@
 
-
-# Readable
+# Project: Readable
+## Description
 
 > This project is built with React, Redux and React Router.  This app allows users to post content to predefined categories, comment on their posts and other users' posts, and vote on posts and comments, also allows users to edit and delete posts and comments.
 
  
 ---
-
-
-
 
 ## API
 
