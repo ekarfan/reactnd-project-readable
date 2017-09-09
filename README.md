@@ -23,7 +23,7 @@ A copy of their repository is present here (on `server/` folder) so both could b
 Install all necessary modules to run the current project.
 
 ```bash
-$ git clone https://github.com/fernandobrito/reactnd-project-readable
+$ git clone https://github.com/ekarfan/reactnd-project-readable
 $ cd reactnd-project-readable/
 $ npm install
 $ cd server/
@@ -47,15 +47,6 @@ The app will be served with live reloading on `http://localhost:3000`.
 ```bash
 $ cd reactnd-project-readable/
 $ npm start
-```
-
-**Note to reviewer:** To make deployment easier, I have modified the backend API server so routes live under a `api/` namespace.
-If you use the server inside `server/` folder, it should work as expected. In case you want to use the original
-server, please start the front-end server passing the API URL as a variable (like below) or update `.env.development`
-with the correct API URL.
-
-```bash
-$ REACT_APP_API_SERVER=http://localhost:3000 npm start
 ```
 
 ---
