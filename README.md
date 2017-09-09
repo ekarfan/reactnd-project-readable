@@ -20,9 +20,9 @@ A copy of their repository is present here (on `server/` folder) so both could b
 
 ## Installation
 
-Install all necessary modules to run the current project.
+Install all the modules to run the current project.
 
-```bash
+```
 $ git clone https://github.com/ekarfan/reactnd-project-readable
 $ cd reactnd-project-readable/
 $ npm install
@@ -36,7 +36,7 @@ $ npm install
 
 First, start the API backend. It will be served on `http://localhost:5001/api/`:
 
-```bash
+```
 $ cd reactnd-project-readable/server/
 $ npm start
 ```
@@ -44,22 +44,13 @@ $ npm start
 Then, go back to the root of the project and run the development server in another terminal. 
 The app will be served with live reloading on `http://localhost:3000`.
 
-```bash
+```
 $ cd reactnd-project-readable/
 $ npm start
 ```
 
 ---
 
-## Build
-
-Build the app for production to the `build` folder.
-
-```bash
-$ cd reactnd-project-readable/
-$ npm run build
-```
----
 
 
 ## Contributing
