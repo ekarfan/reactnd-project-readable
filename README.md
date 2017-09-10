@@ -10,13 +10,11 @@
 ## API
 
 This applications consumes data from an API designed by Udacity specifically for the assignment, which can be found on [Udacity's GitHub](https://github.com/udacity/reactnd-project-readable-starter).
-A copy of their repository is present here (on `server/` folder) so both could be deployed together.
 
----
 
 ## Installation
 
-Install all the modules to run the current project.
+Install all the reqired modules to run the current project.
 
 ```
 $ git clone https://github.com/ekarfan/reactnd-project-readable
@@ -30,15 +28,15 @@ $ npm install
 
 ## Development
 
-First, start the API backend. It will be served on `http://localhost:5001/api/`:
+First, start the API backend. 
 
 ```
 $ cd reactnd-project-readable/server/
 $ npm start
 ```
 
-Then, go back to the root of the project and run the development server in another terminal. 
-The app will be served with live reloading on `http://localhost:3000`.
+Then run the development server in another terminal. 
+
 
 ```
 $ cd reactnd-project-readable/
@@ -47,14 +45,3 @@ $ npm start
 
 ---
 
-
-
-## Contributing
-
-1. Fork it
-2. Create your feature branch with specs (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
-
----
