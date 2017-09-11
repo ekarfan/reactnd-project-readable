@@ -1,9 +1,7 @@
 import * as types from './ActionType';
 import * as API from "../utils/api";
 import { toastr } from 'react-redux-toastr'
-import merge from 'lodash/merge';
 import uuid from 'uuid/v4';
-import orderBy from 'lodash/orderBy';
 
 export const SORT_BY_OPTIONS = [
   { key: 'timestamp/desc', text: 'Created at (desc)', value: 'timestamp/desc' },

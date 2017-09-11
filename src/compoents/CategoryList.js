@@ -4,7 +4,7 @@ import { getAllCategories } from "../actions/CategoryAction";
 import { connect } from 'react-redux'
 import { bindActionCreators } from "redux";
 
-import { Sidebar, Segment, Container, Menu, Icon, Header } from 'semantic-ui-react'
+import { Container, Menu, Icon, Header } from 'semantic-ui-react'
 import ReduxToastr from 'react-redux-toastr'
 
 class CategoryList extends Component {
@@ -40,9 +40,7 @@ class CategoryList extends Component {
         <Container className="App-Content" basic>
           <Container>
             <Header as ="h2"> Readable: a content and comment web app</Header>
-            <Header as="h4" disabled style={{ marginTop: 0 }}>
-              Created with React/Redux &nbsp; by Karen Fan
-            </Header>
+            
           </Container>
           {this.props.children}
         </Container>

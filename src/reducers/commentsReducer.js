@@ -1,5 +1,4 @@
 import omit from 'lodash/omit';
-import merge from 'lodash/merge';
 import orderBy from 'lodash/orderBy';
 
 import * as types from '../actions/ActionType';

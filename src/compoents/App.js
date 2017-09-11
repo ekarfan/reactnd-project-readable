@@ -1,12 +1,10 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { createStore, compose, applyMiddleware, combineReducers } from 'redux';
+import { compose, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import createHistory from 'history/createBrowserHistory'
-//import { browserHistory } from 'react-router'
 import { routerMiddleware } from 'react-router-redux'
 import configureStore from '../store/configureStore';
-import rootReducer from '../reducers'
 import Routes from './routes';
 
 import './App.css'
@@ -25,7 +23,7 @@ const enhancers = composeEnhancers(
   applyMiddleware(middleware)
 );
 
-const store = configureStore();
+const store = configureStore(enhancers);
 
 
 const App = () => {

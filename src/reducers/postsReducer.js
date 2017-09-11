@@ -1,8 +1,6 @@
 import orderBy from 'lodash/orderBy';
-import { toastr } from 'react-redux-toastr'
 import omit from 'lodash/omit';
 import merge from 'lodash/merge';
-import uuid from 'uuid/v4';
 
 import * as types from '../actions/ActionType';
 
