@@ -4,8 +4,8 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from "redux";
 
 import { Item } from "semantic-ui-react";
+import * as postActions from "../../actions/PostAction";
 
-import { votePost,  changeModalVisibility, handlePostForm, deletePost, startEditingPost } from "../../actions/PostAction";
 import PostPreview from "./PostsPreviewList";
 import PostFormModal from "./PostFormModal";
 import { withRouter } from "react-router-dom";
@@ -13,6 +13,7 @@ import { editingPostSelector } from "../../selectors/selector";
 
 
 class PostsPreviewContainer extends Component {
+  
   renderPosts() {
     return (
       <Item.Group divided relaxed>
@@ -54,7 +55,7 @@ class PostsPreviewContainer extends Component {
           handleForm={this.props.handleForm}
           handleModalVisibility={this.props.handleModalVisibility}
           categories={this.props.categories}
-          category={this.props.match.params.category}
+          category={this.props.category}
         />
       </div>
     )
@@ -70,22 +71,42 @@ PostsPreviewContainer.defaultProps = {
   showBody: false
 };
 
-const mapDispatchToProps = (dispatch) => {
+//const mapDispatchToProps = (dispatch) => {
+//  return bindActionCreators({
+//    handlePostVote: postActions.votePost,
+//    handleModalVisibility: postActions.changeModalVisibility,
+//    handleForm: postActions.handlePostForm,
+//    handleDelete: postActions.deletePost,
+//    handleStartEditing: postActions.startEditingPost
+//  }, dispatch)
+//};
+
+function mapStateToProps(state, ownProps) {
+  return {
+    isModalOpen: state.posts.isModalOpen,
+    editingPost: editingPostSelector(state.posts),
+    categories: state.categories,
+    category: ownProps.match.params.category
+  };
+}
+
+function mapDispatchToProps(dispatch) {
   return bindActionCreators({
-    handlePostVote: votePost,
-    handleModalVisibility: changeModalVisibility,
-    handleForm: handlePostForm,
-    handleDelete: deletePost,
-    handleStartEditing: startEditingPost
+    handlePostVote: postActions.votePost,
+    handleModalVisibility: postActions.changeModalVisibility,
+    handleForm: postActions.handlePostForm,
+    handleDelete: postActions.deletePost,
+    handleStartEditing: postActions.startEditingPost
   }, dispatch)
-};
+}
 
-const mapStateToProps = (state, ownProps) => ({
-  isModalOpen: state.posts.isModalOpen,
-  editingPost: editingPostSelector(state.posts),
-  categories: state.categories
-});
+//const mapStateToProps = (state, ownProps) => ({
+//  isModalOpen: state.posts.isModalOpen,
+//  editingPost: editingPostSelector(state.posts),
+//   categories: state.categories
+//});
 
+//export default connect(mapStateToProps, mapDispatchToProps)(PostsPreviewContainer);
 export default withRouter(
   connect(mapStateToProps, mapDispatchToProps)(PostsPreviewContainer)
 );

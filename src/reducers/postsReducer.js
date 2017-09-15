@@ -1,21 +1,8 @@
-import orderBy from 'lodash/orderBy';
 import omit from 'lodash/omit';
 import merge from 'lodash/merge';
 
 import * as types from '../actions/ActionType';
 
-export function postsSelector(state) {
-  const notDeleted = Object.values(state.byId).filter((post) => !post.deleted);
-  return orderBy(notDeleted, state.sortBy.key, state.sortBy.order);
-}
-
-export function postSelector(state, postId) {
-  return state.byId[postId];
-}
-
-export function editingPostSelector(state) {
-  return state.byId[state.editingPostId]
-}
 
 const INITIAL_STATE = {
   byId: {},

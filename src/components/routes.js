@@ -5,6 +5,7 @@ import { ConnectedRouter } from "react-router-redux";
 import CategoryList from "./CategoryList";
 import CategoryPageContainer from "./category/CategoryPage";
 import PostPageContainer from "./post/PostPage";
+import NotFound from './NotFound';
 
 class Routes extends Component {
   render() {
@@ -15,6 +16,8 @@ class Routes extends Component {
             <Route exact path='/' component={CategoryPageContainer} />
             <Route exact path='/:category' component={CategoryPageContainer} />
             <Route exact path='/:category/:postId' component={PostPageContainer} />
+            <Route exact path='/*' component={NotFound} />
+ 
           </Switch>
         </CategoryList>
       </ConnectedRouter>
