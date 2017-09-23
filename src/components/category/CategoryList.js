@@ -46,8 +46,7 @@ const CategoryPage = (props) => {
       <Segment color="black">
         <PostsPreviewContainer posts={props.posts} />
         {props.posts.length === 0 && <h3>There are no posts in this category yet. Start by creating your own!</h3>}
-      </Segment>
-    </div>
+      </Segment>    </div>
   );
 };
 
