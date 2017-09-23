@@ -1,24 +1,24 @@
 import orderBy from 'lodash/orderBy';
 
 
-export function commentsSelector(state) {
+export const commentsSelector = state => {
   const notDeleted = Object.values(state.byId).filter((comment) => !comment.deleted);
   return orderBy(notDeleted, state.sortBy.key, state.sortBy.order);
 }
 
-export function editingCommentSelector(state) {
+export const editingCommentSelector = state => {
   return state.byId[state.editingCommentId]
 }
 
-export function postsSelector(state) {
+export const postsSelector = state => {
   const notDeleted = Object.values(state.byId).filter((post) => !post.deleted);
   return orderBy(notDeleted, state.sortBy.key, state.sortBy.order);
 }
 
-export function postSelector(state, postId) {
+export const postSelector = (state, postId) => {
   return state.byId[postId];
 }
 
-export function editingPostSelector(state) {
+export const editingPostSelector = state => {
   return state.byId[state.editingPostId]
 }

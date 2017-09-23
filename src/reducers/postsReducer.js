@@ -18,8 +18,7 @@ export default function postsReducer(state = INITIAL_STATE, action) {
   switch (action.type) {
     case types.RETRIEVE_FROM_CATEGORY: {
       const postsById = action.posts
-        .reduce((posts, post) => (Object.assign(posts, {[post.id]: post})), {});
-
+      .reduce((posts, post) => (Object.assign(posts, {[post.id]: post})), {});
       return Object.assign({}, state, {byId: postsById});
     }
     case types.RETRIEVE:

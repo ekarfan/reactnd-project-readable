@@ -31,9 +31,8 @@ function commentsReducer(state = INITIAL_STATE, action) {
   switch (action.type) {
     case types.RETRIEVE_COMMENTS: {
       const commentsById = action.comments
-        .reduce((comments, comment) => (Object.assign(comments, {[comment.id]: comment})), {});
-
-      return {
+      .reduce((comments, comment) => (Object.assign(comments, {[comment.id]: comment})), {});
+       return {
         ...state,
         byId: commentsById
       };

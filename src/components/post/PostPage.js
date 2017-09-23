@@ -18,17 +18,17 @@ class CategoryPageContainer extends Component {
 
   componentWillReceiveProps(nextProps) {
     // Post was deleted. Redirect user to category page
-    if (this.props.post && nextProps.post === undefined) {
+    if (!nextProps.post) {
       this.props.redirectTo(`/${this.props.post.category}`);
     }
   }
 
   render() {
-    if (!this.props.post)
+      if (!this.props.post)
       return null;
 
     return (
-      <PostPage post={this.props.post} />
+      <PostPage post= {this.props.post} />
     );
   }
 }

@@ -1,4 +1,4 @@
-const api = process.env.REACT_APP_API_SERVER;
+const api = process.env.REACT_APP_API_SERVER || 'http://localhost:5001';
 //const api = "http://localhost:5001"
 
 // Generate a unique token for storing your bookshelf data on the backend server.
